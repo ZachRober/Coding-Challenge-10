@@ -5,18 +5,16 @@ const sizeSelector = document.getElementById('size-selector');
 const purchase = document.getElementById('purchase');
 
 sizeSelector.addEventListener('change',(event)=>{
-const realPirce = event.target.value;
-productPrice.textContent = `$${realPirce}`;
-});
-purchase.addEventListener('click',(event)=>{
-event.preventDefault(); //prevents page from refreshing on submission
-if(event.target.boolean===true){
-    alert("You have completed your purchase");
-    sizeSelector.reset();
+const realPrice = event.target.value;
+productPrice.textContent = `$${realPrice}`;
+const option = event.target.options[event.target.selectedIndex];
+if(option.text.includes("In Stock")){
+    purchase.disabled = false;
 }
 else{
-    purchase.disable = true;
-    alert("Item is out of stock");
+    purchase.disabled=true;
 }
-})
-
+});
+purchase.addEventListener('click',()=>{
+    
+    })

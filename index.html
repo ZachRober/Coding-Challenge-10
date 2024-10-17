@@ -8,14 +8,16 @@
 <body>
     <h1>JavaScript Basics Coding Challenge10</h1>
     <h2 id="product-name">Milkshake</h2>
-    <p id="product-price">$3.99</p>
+    
     <label for="size-selector">Select a size</label>
     <select id="size-selector">
-    <option value="3.99" boolean=true> Size - small</option>
-    <option value="4.99" boolean=false> Size - medium</option>
-    <option value="5.49" boolean=true> Size - large</option>
+    <option></option>
+    <option value="3.99"> Small - In Stock</option>
+    <option value="4.99"> Medium - Out of Stock</option>
+    <option value="5.49"> Large - In Stock</option>
     </select>
-    <button id="purchase">Purchase</button>
+    <button id="purchase" disabled>Purchase</button>
+    <p id="product-price"></p>
     
     <script src="cc_10.js"></script>
 </body>
