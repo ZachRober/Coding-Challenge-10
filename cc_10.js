@@ -13,8 +13,9 @@ if(option.text.includes("In Stock")){
 }
 else{
     purchase.disabled=true;
+    productPrice.textContent = ("Item is out of stock");
 }
 });
 purchase.addEventListener('click',()=>{
-    
+    alert("Purchase complete");
     })
