@@ -26,8 +26,8 @@ purchase.addEventListener('click',()=>{
     })
 
 outerDiv.addEventListener("click",(x)=>{
-    const addSize=document.createElement('option');
-    addSize.value=prompt("Enter a new price");
+    const addSize=document.createElement('option');//product button bubbles up and adds an option to list
+    addSize.value=prompt("Enter a new price");//prompt for price
     addSize.textContent=` ${productList.value} - In Stock`;
     sizeSelector.appendChild(addSize);
 
